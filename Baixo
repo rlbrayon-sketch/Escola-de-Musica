@@ -1,0 +1,11 @@
+package src.InstrumentoMusical;
+public class Baixo extends InstrumentoMusical {
+    public Baixo(String material) {
+        super("Baixo", material);
+    }
+
+    @Override
+    public void tocar() {
+        System.out.println("O " + this.nome + "segura a base do baixo como o baixista do Black Sabbath."); 
+    }
+}

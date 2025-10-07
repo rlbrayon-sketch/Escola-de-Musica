@@ -1,0 +1,52 @@
+package src.InstrumentoMusical;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Orquestra {
+    private List<InstrumentoMusical> instrumentos;
+
+    public Orquestra() {
+        this.instrumentos = new ArrayList<>();
+    }
+
+    public void adicionarInstrumento(InstrumentoMusical instrumento) {
+        this.instrumentos.add(instrumento);
+    }
+
+    public void ensaiar() {
+        System.out.println("\n(INICIANDO ENSAIO) (musica de ensaio: Saturday Night - Misfits)");
+        
+        for (InstrumentoMusical instrumento : instrumentos) {
+            System.out.println("Material: " + instrumento.getMaterial());
+            instrumento.afinar();
+            System.out.println("_____");
+        }
+        
+        System.out.println(" (Instrumentos prontos para tocar.)\n");
+    }
+
+    public void concerto() {
+        System.out.println("\n(Iniciando o ensaio da melhor musica da terrra) (Saturday Night - Misfits) ");
+        
+        for (InstrumentoMusical instrumento : instrumentos) {
+            instrumento.tocar();
+        }
+        System.out.println(" (ensaio finalizado) \n");
+    }
+
+    public static void main(String[] args) {
+        Guitarra g = new Guitarra("Madeira e Metal");
+        Bateria b = new Bateria("Madeira e Couro");
+        Baixo x = new Baixo("Madeira");
+
+        Orquestra banda = new Orquestra();
+
+        banda.adicionarInstrumento(g);
+        banda.adicionarInstrumento(b);
+        banda.adicionarInstrumento(x);
+        
+        banda.ensaiar(); 
+        banda.concerto(); 
+    }
+}

@@ -1,0 +1,11 @@
+package src.InstrumentoMusical;
+public class Bateria extends InstrumentoMusical {
+    public Bateria(String material) {
+        super("Bateria Acústica", material);
+    }
+
+    @Override
+    public void tocar() {
+        System.out.println("A " + this.nome + " bate o ritmo da bateria como o Eloy Casagrande.");
+    }
+}

@@ -1,0 +1,19 @@
+package src.InstrumentoMusical;
+public abstract class InstrumentoMusical {
+    protected String nome;
+    protected String material;
+
+    public InstrumentoMusical(String nome, String material) {
+        this.nome = nome;
+        this.material = material;
+    }
+    public abstract void tocar();
+
+    public void afinar() {
+        System.out.println("-> Afinador: " + this.nome + " está sendo afinado.");
+    }
+
+    public String getMaterial() {
+        return this.material;
+    }
+}

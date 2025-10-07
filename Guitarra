@@ -1,0 +1,11 @@
+package src.InstrumentoMusical;
+public class Guitarra extends InstrumentoMusical {
+    public Guitarra(String material) {
+        super("Guitarra Elétrica", material);
+    }
+
+    @Override
+    public void tocar() {
+        System.out.println("A " + this.nome + "faz um solo de guitarra como o guitarrista do Gun's N Roses.");
+    }
+}
